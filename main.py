@@ -32,7 +32,12 @@ class Separater:
 
                 ch_3 = (chbase - (Separater._CHOSUNG * ch_1) - (Separater._JUNGSUNG * ch_2))
                 _all_.append(Separater._JONGSUNG_LIST[ch_3])
-        _all_.remove(' ')
+
+        while True:
+            try:
+                _all_.remove(' ')
+            except ValueError:
+                break
 
         return _all_
 
